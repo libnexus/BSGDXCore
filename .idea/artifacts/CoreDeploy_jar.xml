@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CoreDeploy:jar">
+    <output-path>$USER_HOME$/BoidSimulatorGDX/plugins</output-path>
+    <root id="archive" name="Core.jar">
+      <element id="module-output" name="BoidPlugin.main" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Boid Simulator GDX/desktop/build/libs/desktop-1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
