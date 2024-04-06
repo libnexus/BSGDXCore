@@ -1,15 +1,15 @@
 package com.libnexus.bsgdx.plugin.core.boid.prejudice.agency;
 
-import com.libnexus.boidsimulator.util.Colour;
-import com.libnexus.bsgdx.plugin.core.boid.prejudice.PrejudiceBoid;
-import com.badlogic.gdx.graphics.Color;
-import com.libnexus.boidsimulator.World;
 import com.libnexus.boidsimulator.api.plugin.Plugin;
 import com.libnexus.boidsimulator.api.plugin.PluginBoidAgency;
 import com.libnexus.boidsimulator.entity.boid.Boid;
+import com.libnexus.boidsimulator.util.ColorUtils;
 import com.libnexus.boidsimulator.util.Vector2f;
+import com.libnexus.bsgdx.plugin.core.boid.prejudice.PrejudiceBoid;
+import com.sun.source.tree.LiteralTree;
 
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class PrejudiceRedBoidAgency extends PluginBoidAgency {
     public PrejudiceRedBoidAgency(Plugin plugin) {
@@ -23,12 +23,12 @@ public class PrejudiceRedBoidAgency extends PluginBoidAgency {
 
     @Override
     public String[] qualifiers() {
-        return new String[]{ "core:prejudice:red" };
+        return new String[]{"core:prejudice:red"};
     }
 
     @Override
     public int[] keyBindings() {
-        return new int[]{  };
+        return new int[]{};
     }
 
     @Override
@@ -43,8 +43,11 @@ public class PrejudiceRedBoidAgency extends PluginBoidAgency {
 
     @Override
     public void killAll() {
-        for (Boid boid : new HashSet<>(plugin.getWorldBoids()))
-            if (boid.getClass() == PrejudiceBoid.class && Colour.equals(PrejudiceBoid.RED, boid.currColour))
+
+        for (Iterator<Boid> boids = plugin.getAllBoids().iterator(); boids.hasNext(); ) {
+            Boid boid = boids.next();
+            if (boid.getClass() == PrejudiceBoid.class && ColorUtils.equals(PrejudiceBoid.RED, boid.currColour))
                 plugin.removeBoid(boid);
+        }
     }
 }

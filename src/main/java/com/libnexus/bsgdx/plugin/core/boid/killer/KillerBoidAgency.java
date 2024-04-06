@@ -5,7 +5,6 @@ import com.libnexus.boidsimulator.api.plugin.Plugin;
 import com.libnexus.boidsimulator.api.plugin.PluginBoidAgency;
 import com.libnexus.boidsimulator.entity.boid.Boid;
 import com.libnexus.boidsimulator.util.Vector2f;
-import com.libnexus.bsgdx.plugin.core.boid.disruptive.DisruptiveBoid;
 
 public class KillerBoidAgency extends PluginBoidAgency {
     public KillerBoidAgency(Plugin plugin) {
@@ -19,12 +18,12 @@ public class KillerBoidAgency extends PluginBoidAgency {
 
     @Override
     public String[] qualifiers() {
-        return new String[]{ "core:killer", "killer", "KBoid" };
+        return new String[]{"core:killer", "killer", "KBoid"};
     }
 
     @Override
     public int[] keyBindings() {
-        return new int[]{ Input.Keys.NUM_5, Input.Keys.K };
+        return new int[]{Input.Keys.NUM_5, Input.Keys.K};
     }
 
     @Override

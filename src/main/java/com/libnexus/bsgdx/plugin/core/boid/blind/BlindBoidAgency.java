@@ -18,12 +18,12 @@ public class BlindBoidAgency extends PluginBoidAgency {
 
     @Override
     public String[] qualifiers() {
-        return new String[]{ "core:blind", "blind", "BDBoid" };
+        return new String[]{"core:blind", "blind", "BDBoid"};
     }
 
     @Override
     public int[] keyBindings() {
-        return new int[]{ Input.Keys.NUM_4 };
+        return new int[]{Input.Keys.NUM_4};
     }
 
     @Override

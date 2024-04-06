@@ -18,12 +18,12 @@ public class DisruptiveBoidAgency extends PluginBoidAgency {
 
     @Override
     public String[] qualifiers() {
-        return new String[]{ "core:disruptive", "disruptive", "DBoid" };
+        return new String[]{"core:disruptive", "disruptive", "DBoid"};
     }
 
     @Override
     public int[] keyBindings() {
-        return new int[]{ Input.Keys.NUM_3, Input.Keys.D };
+        return new int[]{Input.Keys.NUM_3, Input.Keys.D};
     }
 
     @Override

@@ -18,12 +18,12 @@ public class ChameleonBoidAgency extends PluginBoidAgency {
 
     @Override
     public String[] qualifiers() {
-        return new String[]{ "core:chameleon", "chameleon", "CMBoid" };
+        return new String[]{"core:chameleon", "chameleon", "CMBoid"};
     }
 
     @Override
     public int[] keyBindings() {
-        return new int[]{ Input.Keys.NUM_6 };
+        return new int[]{Input.Keys.NUM_6};
     }
 
     @Override
