@@ -41,7 +41,7 @@ public class PrejudiceBlueBoidAgency extends PluginBoidAgency {
 
     @Override
     public void killAll() {
-        for (Boid boid : new HashSet<>(plugin.getWorldBoids()))
+        for (Boid boid : new HashSet<>(plugin.getAllBoids()))
             if (boid.getClass() == PrejudiceBoid.class && ColorUtils.equals(PrejudiceBoid.BLUE, boid.currColour))
                 plugin.removeBoid(boid);
     }

@@ -6,6 +6,7 @@ import com.libnexus.boidsimulator.api.plugin.Plugin;
 import com.libnexus.bsgdx.plugin.core.boid.blind.BlindBoidAgency;
 import com.libnexus.bsgdx.plugin.core.boid.chameleon.ChameleonBoidAgency;
 import com.libnexus.bsgdx.plugin.core.boid.disruptive.DisruptiveBoidAgency;
+import com.libnexus.bsgdx.plugin.core.boid.jeb.JebAgency;
 import com.libnexus.bsgdx.plugin.core.boid.killer.KillerBoidAgency;
 import com.libnexus.bsgdx.plugin.core.boid.prejudice.agency.PrejudiceBlueBoidAgency;
 import com.libnexus.bsgdx.plugin.core.boid.prejudice.agency.PrejudiceBoidAgency;
@@ -26,6 +27,8 @@ public class Core extends Plugin {
 
         addAgency(new PrejudiceBlueBoidAgency(this));
         addAgency(new PrejudiceRedBoidAgency(this));
+
+        addAgency(new JebAgency(this));
 
         console().announce("core", Color.CYAN, "initialized");
     }
